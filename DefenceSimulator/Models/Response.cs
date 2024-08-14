@@ -9,7 +9,7 @@ namespace DefenceSimulator.Models
         public int ResponseId { get; set; }
         [Required]
         public int SalvoId { get; set; }
-        public Salvo salvo { get; set; }
+        public Salvo? salvo { get; set; }
         [Required]
         public DateTime LaunchTime { get; set; }
         public DateTime? InterceptTime { get; set; }

@@ -21,6 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Weapon)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeaponAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -37,9 +43,19 @@
                 @Html.DisplayFor(modelItem => item.Weapon.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                @Html.DisplayFor(modelItem => item.WeaponAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                    @if (!item.IsActive)
+                    {
+                        <a asp-action="Launch" asp-route-id="@item.Id">שא - גר</a>
+                    }
+                    |
+                    <a asp-action="Edit" asp-route-id="@item.Id">ערוך</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">בטל</a>
             </td>
         </tr>
 }

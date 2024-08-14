@@ -24,7 +24,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="DefenceWeaponId" class="control-label"></label>
-                <select asp-for="DefenceWeaponId" class ="form-control" asp-items="ViewBag.DefenceWeaponId"></select>
+                <select asp-for="DefenceWeaponId" class ="form-control" asp-items="ViewBag.DefenceWeaponId">
+                    <option disabled selected>Select Weapon Defences</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
