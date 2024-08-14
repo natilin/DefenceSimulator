@@ -6,7 +6,7 @@ namespace DefenceSimulator.Models
     public class Salvo
     {
         [Key]
-        public int SalvoId { get; set; }
+        public int Id { get; set; }
         [Required]
         public int EnemyId { get; set; }
         public Enemy Enemy { get; set; }
@@ -16,6 +16,9 @@ namespace DefenceSimulator.Models
         public int WeaponId { get; set; }
         // Navigation property for Weapon
         public Weapon Weapon { get; set; }
-        public Response? Response { get; set; }
+        public int WeaponAmount {  get; set; }
+        public bool IsActive { get; set; } = false;
+        public ICollection<Response>? Responses { get; } = new List<Response>();
+
     }
 }

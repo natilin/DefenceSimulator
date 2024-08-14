@@ -13,7 +13,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Origin)
+                @Html.DisplayNameFor(model => model.Enemy)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.LaunchTime)
@@ -28,18 +28,18 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Origin)
+                @Html.DisplayFor(modelItem => item.Enemy.Name)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.LaunchTime)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Weapon.WeaponId)
+                @Html.DisplayFor(modelItem => item.Weapon.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ThreatId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ThreatId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ThreatId">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

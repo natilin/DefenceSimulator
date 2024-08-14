@@ -8,7 +8,7 @@ namespace DefenceSimulator.Models
         [Key]
         public int ResponseId { get; set; }
         [Required]
-        public int SalvotId { get; set; }
+        public int SalvoId { get; set; }
         public Salvo salvo { get; set; }
         [Required]
         public DateTime LaunchTime { get; set; }

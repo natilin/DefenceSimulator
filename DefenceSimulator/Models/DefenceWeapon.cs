@@ -1,8 +1,10 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using System.ComponentModel.DataAnnotations;
 
 namespace DefenceSimulator.Models
 {
+    [Index(nameof(Name), IsUnique = true)]
     public class DefenceWeapon
     {
         [Key]

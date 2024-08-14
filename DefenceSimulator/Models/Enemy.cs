@@ -9,7 +9,7 @@ namespace DefenceSimulator.Models
         [Required]
         public string Name { get; set; }
         public int Distance { get; set; }
-        public ICollection<Thread> Weapons { get; } = new List<Weapon>();
+        public ICollection<Salvo>? Salvo { get; } = new List<Salvo>();
 
 
     }

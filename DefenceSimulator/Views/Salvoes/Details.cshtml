@@ -7,14 +7,14 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Threat</h4>
+    <h4>Salvo</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Origin)
+            @Html.DisplayNameFor(model => model.Enemy)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Origin)
+            @Html.DisplayFor(model => model.Enemy.Name)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.LaunchTime)
@@ -26,11 +26,11 @@
             @Html.DisplayNameFor(model => model.Weapon)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Weapon.WeaponId)
+            @Html.DisplayFor(model => model.Weapon.Name)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.ThreatId">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
